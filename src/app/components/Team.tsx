@@ -56,7 +56,7 @@ const team = [
   },
 ];
 
-export default function Project() {
+export default function Team() {
   const ref = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
 
