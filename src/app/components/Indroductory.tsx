@@ -8,8 +8,8 @@ const Indroductory: React.FC = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500,  // Animation duration
-      easing: 'ease-out',  // Easing function
+      duration: 1500, 
+      easing: 'ease-out', 
     });
   }, []);
 
