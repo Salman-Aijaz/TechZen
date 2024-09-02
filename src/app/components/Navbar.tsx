@@ -66,9 +66,6 @@ const Navbar = () => {
                 <Link href="/services" className="text-lg text-gray-900 dark:text-white">Services</Link>
               </li>
               <li>
-                <Link href="/pricing" className="text-lg text-gray-900 dark:text-white">Team</Link>
-              </li>
-              <li>
                 <Link href="/contact" className="text-lg text-gray-900 dark:text-white">Contact</Link>
               </li>
             </ul>
@@ -84,9 +81,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link href="/services" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</Link>
-            </li>
-            <li>
-              <Link href="/pricing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Team</Link>
             </li>
             <li>
               <Link href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
