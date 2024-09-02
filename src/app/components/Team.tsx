@@ -81,7 +81,7 @@ export default function Team() {
 
   return (
     <div className="flex justify-center items-center">
-      <div ref={ref} className="w-full max-w-4xl px-4">
+      <div ref={ref} className="w-full max-w-4xl px-4 pb-24">
       <h2 className="text-3xl font-bold mb-6 text-center">Our Team</h2>
         {team.map((member, index) => (
           <div
