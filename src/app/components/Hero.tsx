@@ -18,7 +18,7 @@ const Hero = () => {
     <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
       <section className="flex flex-col items-center">
         <div
-          className="flex max-w-3xl flex-col items-center py-8 px-8 text-center lg:pb-32"
+          className="flex max-w-3xl flex-col items-center py-8 px-8 text-center lg:pb-16"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-easing="ease-out"
