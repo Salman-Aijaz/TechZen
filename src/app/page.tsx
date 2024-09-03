@@ -6,7 +6,7 @@ import Indroductory from "./components/Indroductory";
 import Services from "./services/page";
 export default function Home() {
   return (
-   <div>
+   <div className="dark:bg-gray-950 bg-white">
     <Hero/>
     <About/>
     <Indroductory/>

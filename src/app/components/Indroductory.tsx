@@ -14,10 +14,10 @@ const Indroductory: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className='flex flex-col items-center justify-center min-h-screen'>
+    <div ref={sectionRef} className='flex flex-col items-center justify-center sm:min-h-screen'>
       <div className='text-center'>
         <h1 className='text-4xl font-bold mb-4'>Get to Know</h1>
-        <p className='mb-4'>Watch our introductory video to learn more about our team, our process, and how we can help your business grow.</p>
+        <p className='mb-4 text-gray-600'>Watch our introductory video to learn more about our team, our process, and how we can help your business grow.</p>
         <div
           data-aos="zoom-in"
           data-aos-duration="1500"
