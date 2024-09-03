@@ -37,7 +37,7 @@ const Services = () => {
 
     return (
         <>
-                  <h2 className="text-3xl font-bold text-center">Our Team</h2>
+        <h2 className="text-4xl font-bold text-center">Our Services</h2>
         <div className="flex justify-center items-center px-2 md:px-28 lg:px-40 my-16 cursor-default select-none">
             <div className='grid md:grid-cols-2 gap-5 justify-items-center'>
                 {services.map(service => (

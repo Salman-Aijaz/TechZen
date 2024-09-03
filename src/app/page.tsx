@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import About from "./about/page";
-import Team from "./components/Team";
+import Projects from "./components/Projects";
 import Indroductory from "./components/Indroductory";
 import Services from "./services/page";
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
     <Hero/>
     <About/>
     <Indroductory/>
-    <Team/>
+    <Projects/>
     <Services/>
     </div>
   );

@@ -13,14 +13,14 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-24">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20 border-b-2 md:px-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
             src={logo}
             alt="Logo"
-            className="object-contain"
+            className=" "
             width={150}  
-            height={60} 
+            height={40} 
             priority
           />
         </Link>

@@ -9,17 +9,17 @@ const Indroductory: React.FC = () => {
   useEffect(() => {
     AOS.init({
       duration: 1500, 
-      easing: 'ease-out', 
+      // easing: 'ease-out', 
     });
   }, []);
 
   return (
     <div ref={sectionRef} className='flex flex-col items-center justify-center min-h-screen'>
       <div className='text-center'>
-        <h1 className='text-3xl font-bold mb-4'>Get to Know</h1>
+        <h1 className='text-4xl font-bold mb-4'>Get to Know</h1>
         <p className='mb-4'>Watch our introductory video to learn more about our team, our process, and how we can help your business grow.</p>
         <div
-          data-aos="fade-up"
+          data-aos="zoom-in"
           data-aos-duration="1500"
           data-aos-easing="ease-out"
           data-aos-offset="200"

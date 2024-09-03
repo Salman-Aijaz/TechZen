@@ -1,62 +1,49 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import Salman from "../../../public/muhammad salman.jpeg";
-import Sufiyan from "../../../public/muhammad sufiyan.jpeg";
-import Hasan from "../../../public/muhammad hasan.jpeg";
-import Zaeem from "../../../public/muhammad zaeem.jpg";
+import Quiz from "../../../public/Quiz.jpg"
+import Ecommerce from "../../../public/e commerce.png"
+import Gallery from "../../../public/gallery.png"
 
-const team = [
+const projects = [
   {
-    name: "M.Salman",
+    name: "QuizNex",
     description:
-    "M. Salman is a full stack developer skilled in Django, Node.js, and React."    
+    "Quiz App with React.js, Tailwind CSS, Neon DB and Express.js. Teachers upload questions; students take quizzes. Cheat-proof with disabled shortcuts."    
     ,tags: [
       "React",
       "Tailwind",
-      "Typescript",
-      "Next.js",
-      "Mongo Db",
+      "Javascript",
+      "Express.JS",
+      "Neon Db",
       "Node JS",
-      "Python",
-      "Django",
-      "Flask",
+      "JWT",
     ],
-    pic: Salman,
+    pic: Quiz,
   },
   {
-    name: "M.Sufiyan",
+    name: "Sk-Store",
     description:
-      "M.Sufiyan is a full stack developer skilled in Node.js ,Next Js and React.",
+      "E-commerce platform with React, Node.js, featuring an admin panel for adding and managing products, with real-time data handling using MongoDB and Express.js",
     tags: [
       "React",
-      "Tailwind",
-      "Typescript",
-      "Next.js",
-      "Mongo Db",
+      "Javascript",
       "Node JS",
-      "Python",
-      "Fast Api",
-      "Postgres Sql",
+      "Mongo Db",
+      "Express JS",
     ],
-    pic: Sufiyan,
+    pic: Ecommerce,
   },
   {
-    name: "M.Hasan",
+    name: "Pixel Place",
     description:
-      "Muhammad Hasan is a frontend developer skilled in React, Next.js, and Tailwind CSS, with expertise in crafting beautiful UIs using Shadcn UI, Material UI",
-    tags: ["React", "Tailwind", "Typescript", "Next.js"],
-    pic: Hasan,
-  },
-  {
-    name: "M.Zaeem",
-    description:"Muhammad Zaeem is a frontend developer skilled in React, Next.js, Tailwind CSS, and PHP, known for crafting elegant, responsive UIs."
-    ,tags: ["React", "Tailwind", "Typescript", "Next.js","PHP"],
-    pic: Zaeem,
+      "A beautifully crafted gallery app built with Next.js,Tailwind CSS, showcasing elegant UI designs with Shadcn UI for a seamless visual experience.",
+    tags: ["Typescript", "Next.js", "Tailwind","Shadcn UI"],
+    pic: Gallery,
   },
 ];
 
-export default function Team() {
+export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState(0);
 
@@ -82,8 +69,8 @@ export default function Team() {
   return (
     <div className="flex justify-center items-center">
       <div ref={ref} className="w-full max-w-4xl px-4 pb-24">
-      <h2 className="text-3xl font-bold mb-6 text-center">Our Team</h2>
-        {team.map((member, index) => (
+      <h2 className="text-6xl font-bold my-6 text-center">Our Projects</h2>
+        {projects.map((project, index) => (
           <div
             key={index}
             style={{
@@ -94,12 +81,12 @@ export default function Team() {
           >
             <section className="bg-gray-100 w-full max-w-[42rem] mx-auto border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
               <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-                <h3 className="text-2xl font-semibold">{member.name}</h3>
+                <h3 className="text-2xl font-semibold">{project.name}</h3>
                 <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-                  {member.description}
+                  {project.description}
                 </p>
                 <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-                  {member.tags.map((tag, tagIndex) => (
+                  {project.tags.map((tag, tagIndex) => (
                     <li
                       key={tagIndex}
                       className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
@@ -110,8 +97,8 @@ export default function Team() {
                 </ul>
               </div>
               <Image
-                src={member.pic}
-                alt={member.name}
+                src={project.pic}
+                alt={project.name}
                 quality={95}
                 className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
                 transition 
