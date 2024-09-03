@@ -4,6 +4,13 @@ import Link from 'next/link';
 import logo from "../../../public/logo.png";
 import Image from 'next/image';
 
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' }
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,13 +19,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20 border-b-2 md:px-4">
+    <nav className="bg-white border-gray-200 dark:bg-gray-950">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20 border-b-2 dark:border-none md:px-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
             src={logo}
             alt="Logo"
-            className=" "
             width={150}  
             height={40} 
             priority
@@ -37,7 +43,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div
-          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white dark:bg-gray-900 transition-transform duration-300 ease-in-out transform ${
+          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white dark:bg-gray-950 transition-transform duration-300 ease-in-out transform ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           } md:hidden`}
           id="navbar-default"
@@ -56,35 +62,27 @@ const Navbar = () => {
               </button>
             </div>
             <ul className="flex flex-col p-4 space-y-6">
-              <li>
-                <Link href="/" className="text-lg text-gray-900 dark:text-white">Home</Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-lg text-gray-900 dark:text-white">About</Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-lg text-gray-900 dark:text-white">Services</Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-lg text-gray-900 dark:text-white">Contact</Link>
-              </li>
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-lg text-gray-900 dark:text-white">{link.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</Link>
-            </li>
-            <li>
-              <Link href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</Link>
-            </li>
-            <li>
-              <Link href="/services" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</Link>
-            </li>
-            <li>
-              <Link href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</Link>
-            </li>
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-950 dark:border-gray-700">
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`block py-2 px-3 rounded ${link.href === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                  aria-current={link.href === '/' ? 'page' : undefined}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

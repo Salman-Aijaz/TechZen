@@ -7,28 +7,29 @@ const services = [
     {
         id: 1,
         title: 'Frontend Development',
-        description: 'We offer services in Frontend Development.',
+        description: 'Transform your vision into a stunning reality with our Frontend Development services. We craft visually appealing and user-friendly interfaces that captivate your audience and enhance user experience.',
         aos: 'zoom-out-up'
     },
     {
         id: 2,
         title: 'Backend Development',
-        description: 'We offer services in Backend Development.',
+        description: 'Power your applications with our robust Backend Development services. We build scalable and secure server-side solutions that ensure smooth functionality and efficient data management for your business.',
         aos: 'zoom-out-up'
     },
     {
         id: 3,
         title: 'API Development',
-        description: 'We offer services in API Development.',
+        description: 'Connect and integrate seamlessly with our API Development services. We design and develop reliable and flexible APIs that enable efficient communication between your applications and external systems.',
         aos: 'zoom-out-up'
     },
     {
         id: 4,
         title: 'MERN Stack Development',
-        description: 'We offer services in MERN Stack Development.',
+        description: 'Leverage the full potential of the MERN stack with our comprehensive development services. From building dynamic web applications to creating sophisticated user interfaces, we utilize MongoDB, Express.js, React.js, and Node.js to deliver powerful and scalable solutions.',
         aos: 'zoom-out-up'
     }
 ];
+
 
 const Services = () => {
     useEffect(() => {
