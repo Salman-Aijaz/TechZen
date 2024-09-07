@@ -7,28 +7,29 @@ const services = [
     {
         id: 1,
         title: 'Frontend Development',
-        description: 'Transform your vision into a stunning reality with our Frontend Development services. We craft visually appealing and user-friendly interfaces that captivate your audience and enhance user experience.',
+        description: 'We create visually appealing, user-friendly interfaces that captivate audiences and enhance user experience.',
         aos: 'zoom-out-up'
     },
     {
         id: 2,
         title: 'Backend Development',
-        description: 'Power your applications with our robust Backend Development services. We build scalable and secure server-side solutions that ensure smooth functionality and efficient data management for your business.',
+        description: 'We build scalable, secure server-side solutions to ensure smooth functionality and efficient data management.',
         aos: 'zoom-out-up'
     },
     {
         id: 3,
-        title: 'API Development',
-        description: 'Connect and integrate seamlessly with our API Development services. We design and develop reliable and flexible APIs that enable efficient communication between your applications and external systems.',
+        title: 'Graphic Designing',
+        description: 'Blending innovation with aesthetics, we craft stunning visuals that make your brand stand out.',
         aos: 'zoom-out-up'
     },
     {
         id: 4,
-        title: 'MERN Stack Development',
-        description: 'Leverage the full potential of the MERN stack with our comprehensive development services. From building dynamic web applications to creating sophisticated user interfaces, we utilize MongoDB, Express.js, React.js, and Node.js to deliver powerful and scalable solutions.',
+        title: 'Mobile Development',
+        description: 'We create feature-rich, seamless apps across platforms, delivering engaging mobile experiences.',
         aos: 'zoom-out-up'
     }
 ];
+
 
 
 const Services = () => {
@@ -38,8 +39,9 @@ const Services = () => {
 
     return (
         <>
-        <h2 className="text-4xl font-bold text-center dark:text-white">Our Services</h2>
-        <div className="flex justify-center items-center px-6 md:px-28 lg:px-40 my-16 cursor-default select-none ">
+        <h2 className="text-5xl font-bold my-6 text-center dark:text-white">Our Services</h2>
+        <p className='text-gray-600 my-2 text-center'>Experience exceptional quality and creativity through our diverse range of tailored services.</p>
+        <div className="flex justify-center items-center px-6 md:px-28 lg:px-40 py-4 cursor-default select-none ">
             <div className='grid md:grid-cols-2 gap-5 justify-items-center'>
                 {services.map(service => (
                     <div
