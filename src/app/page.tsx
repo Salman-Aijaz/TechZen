@@ -5,6 +5,7 @@ import Indroductory from "./components/Indroductory";
 import Services from "./services/page";
 import AboutUs from "./components/AboutUs";
 import Team from "./components/Team";
+import Contact from "./components/Contact";
 export default function Home() {
   return (
    <div className="dark:bg-gray-950 bg-white">
@@ -14,6 +15,7 @@ export default function Home() {
     <Projects/>
     <Team/>
     <Services/>
+    <Contact/>
     </div>
   );
 }
