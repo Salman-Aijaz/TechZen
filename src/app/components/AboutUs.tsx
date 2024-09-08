@@ -4,7 +4,7 @@ import React from "react";
 export default function AboutUs() {
   return (
     <section
-      className="pb-28 max-w-[45rem] mx-auto text-center leading-8 px-4 sm:px-0 dark:text-white"
+      className="pb-20 max-w-[45rem] mx-auto text-center leading-8 px-4 sm:px-0 dark:text-white"
       id="about"
     >
       <h2 className="text-5xl font-bold mb-6">About us</h2>

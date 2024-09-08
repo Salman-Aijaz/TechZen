@@ -41,7 +41,7 @@ const team = [
 const Team = () => {
   
   return (
-    <div className='py-10'>
+    <div className='pb-16'>
       <h2 className="text-5xl font-bold my-6 text-center dark:text-white">Our Team</h2>
       <p className='text-gray-600 my-2 text-center'>Meet the passionate and talented individuals driving our success with their expertise and dedication.</p>
       

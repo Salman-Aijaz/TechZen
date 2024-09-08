@@ -68,7 +68,7 @@ export default function Projects() {
 
   return (
     <div className="flex justify-center items-center">
-      <div ref={ref} className="w-full max-w-4xl px-4 pb-24">
+      <div ref={ref} className="w-full max-w-4xl px-4 pb-20">
       <h2 className=" dark:text-white text-5xl font-bold my-6 text-center">Our Projects</h2>
       <p className='mb-4 text-gray-600 text-center'>Discover the innovation and meticulous craftsmanship that define every project we create.</p>
         {projects.map((project, index) => (

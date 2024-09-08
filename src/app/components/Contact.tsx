@@ -21,7 +21,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div className="px-6 lg:px-0 py-12">
+    <div className="px-6 lg:px-0 pb-12">
       <h2 className="text-5xl font-bold my-6 text-center dark:text-white">
         Contact Our Team
       </h2>
@@ -88,14 +88,14 @@ const Contact = () => {
           <div className="mb-6 grid grid-cols-2 gap-4">
             {servicesProvide.map((service, index) => (
               <label key={index} className="inline-flex items-center gap-2">
-                <input type="checkbox" className="h-5 w-5 " />
+                <input type="checkbox" className="h-5 w-5"/>
                 <span className="text-gray-600 dark:text-gray-300">
                   {service}
                 </span>
               </label>
             ))}
           </div>
-          {/* Submit Button */}
+
           <div className="flex items-center">
             <button
               className="bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-md focus:outline-none focus:shadow-outline"
