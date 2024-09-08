@@ -1,13 +1,21 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import contactbg from "../../../public/contact-bg.jpg"
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const ContactHero = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+}, []);
+
   return (
     <div className="flex flex-col lg:flex-row justify-center items-center py-16 px-8 md:px-16 bg-white dark:bg-gray-950">
       {/* Left Text Section */}
-      <div className="text-center lg:text-left mb-10 md:mb-0 md:max-w-md">
+      <div data-aos={"fade-up-right"} className="text-center lg:text-left mb-10 md:mb-0 md:max-w-md">
         <h2 className="font-bold my-4 dark:text-white xl:text-8xl lg:text-7xl text-6xl">
           Reach <span className="text-[#268d8a]">Out</span> to Us{" "}
           <span className="text-purple-700 xl:text-8xl lg:text-7xl text-6xl">Anytime!</span>
