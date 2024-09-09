@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { TbMessage } from "react-icons/tb";
 import { BsLinkedin } from "react-icons/bs";
 import { SiMinutemailer } from "react-icons/si";
@@ -15,10 +15,80 @@ const servicesProvide = [
   "Mobile Development",
 ];
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+  services: string[];
+}
+
 const Contact = () => {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+    services: [],
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, type, value } = e.target;
+  
+    if (type === "checkbox") {
+      // Type guard for input element
+      const input = e.target as HTMLInputElement;
+      const checked = input.checked;
+      const newServices = checked
+        ? [...formData.services, value]
+        : formData.services.filter((service) => service !== value);
+  
+      setFormData({ ...formData, services: newServices });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
+  };
+  
+
+  const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+    setSuccess(false);
+
+    try {
+      const res = await fetch("/api", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        setSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+          services: [],
+        });
+      } else {
+        setError("Failed to send the message. Please try again.");
+      }
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+    }
+
+    setIsLoading(false);
+  };
 
   return (
     <div className="px-6 lg:px-0 pb-12">
@@ -38,7 +108,7 @@ const Contact = () => {
         data-aos-duration="1500"
         data-aos-easing="ease-out"
       >
-        <form className="mt-8 w-full max-w-lg">
+        <form className="mt-8 w-full max-w-lg" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
               className="block text-gray-600 dark:text-gray-300 text-sm font-bold mb-2"
@@ -49,7 +119,10 @@ const Contact = () => {
             <input
               className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
+              name="name"
               type="text"
+              value={formData.name}
+              onChange={handleInputChange}
               placeholder="Enter your name"
             />
           </div>
@@ -64,7 +137,11 @@ const Contact = () => {
               className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
               placeholder="Enter your email"
+              required
             />
           </div>
           <div className="mb-6">
@@ -77,8 +154,12 @@ const Contact = () => {
             <textarea
               className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
+              name="message"
               rows={4}
+              value={formData.message}
+              onChange={handleInputChange}
               placeholder="Write your message here"
+              required
             ></textarea>
           </div>
 
@@ -88,7 +169,11 @@ const Contact = () => {
           <div className="mb-6 grid grid-cols-2 gap-4">
             {servicesProvide.map((service, index) => (
               <label key={index} className="inline-flex items-center gap-2">
-                <input type="checkbox" className="h-5 w-5"/>
+                <input type="checkbox" className="h-5 w-5"
+                value={service}
+                checked={formData.services.includes(service)}
+                onChange={handleInputChange}
+                />
                 <span className="text-gray-600 dark:text-gray-300">
                   {service}
                 </span>
@@ -100,8 +185,9 @@ const Contact = () => {
             <button
               className="bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-3 px-8 rounded-md focus:outline-none focus:shadow-outline"
               type="submit"
+              disabled={isLoading}
             >
-              Send Message
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </div>
         </form>
