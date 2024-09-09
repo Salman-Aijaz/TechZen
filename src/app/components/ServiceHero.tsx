@@ -24,7 +24,7 @@ const ServiceHero = () => {
       />
 
       <div data-aos={"fade-up-right"} className='relative z-10 flex flex-col items-start justify-center h-full text-white bg-opacity-50 px-10'>
-      <h2 className="font-bold my-4 dark:text-white lg:text-7xl text-6xl">
+      <h2 className="font-bold my-4 lg:text-7xl text-6xl">
       Elevating Your 
        <span className="block text-[#268d8a]">Experience</span> with Unmatched 
        <span className='block text-orange-700'>Excellence</span>

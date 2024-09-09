@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white dark:bg-[#080735]">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20 border-b-2  border-gray-200 dark:border-gray-500 md:px-4">
+    <nav className="bg-gray-50">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto h-20 border-b-2  border-gray-200 md:px-4">
         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
             src={logo}
@@ -32,7 +32,7 @@ const Navbar = () => {
         </Link>
         <button
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-default"
           aria-expanded={isOpen ? "true" : "false"}
           onClick={toggleNavbar}
@@ -43,7 +43,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div
-          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white dark:bg-[#080735] transition-transform duration-300 ease-in-out transform ${
+          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white transition-transform duration-300 ease-in-out transform ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           } md:hidden`}
           id="navbar-default"
@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="flex justify-end p-4">
               <button
                 type="button"
-                className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg"
+                className="text-gray-500 hover:bg-gray-100 p-2 rounded-lg"
                 onClick={toggleNavbar}
               >
                 <span className="sr-only">Close menu</span>
@@ -71,12 +71,12 @@ const Navbar = () => {
           </div>
         </div>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-[#080735]  dark:border-gray-700">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`block py-2 px-3 rounded ${link.href === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'}`}
+                  className={`block py-2 px-3 rounded ${link.href === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'}`}
                   aria-current={link.href === '/' ? 'page' : undefined}
                 >
                   {link.label}

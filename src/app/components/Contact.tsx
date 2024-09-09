@@ -42,7 +42,6 @@ const Contact = () => {
     const { name, type, value } = e.target;
   
     if (type === "checkbox") {
-      // Type guard for input element
       const input = e.target as HTMLInputElement;
       const checked = input.checked;
       const newServices = checked
@@ -92,7 +91,7 @@ const Contact = () => {
 
   return (
     <div className="px-6 lg:px-0 pb-12">
-      <h2 className="text-5xl font-bold my-6 text-center dark:text-white">
+      <h2 className="text-5xl font-bold my-6 text-center">
         Contact Our Team
       </h2>
       <p className="text-gray-600 text-center">
@@ -111,13 +110,13 @@ const Contact = () => {
         <form className="mt-8 w-full max-w-lg" onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
-              className="block text-gray-600 dark:text-gray-300 text-sm font-bold mb-2"
+              className="block dark:text-gray-300 text-sm font-bold mb-2"
               htmlFor="name"
             >
               Full Name
             </label>
             <input
-              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               name="name"
               type="text"
@@ -128,13 +127,13 @@ const Contact = () => {
           </div>
           <div className="mb-4">
             <label
-              className="block text-gray-600 dark:text-gray-300 text-sm font-bold mb-2"
+              className="block text-gray-600 text-sm font-bold mb-2"
               htmlFor="email"
             >
               Email Address
             </label>
             <input
-              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               name="email"
@@ -146,13 +145,13 @@ const Contact = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block text-gray-600 dark:text-gray-300 text-sm font-bold mb-2"
+              className="block text-gray-600 text-sm font-bold mb-2"
               htmlFor="message"
             >
               Message
             </label>
             <textarea
-              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow-md appearance-none rounded-md w-full py-3 px-4 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
               name="message"
               rows={4}
@@ -163,7 +162,7 @@ const Contact = () => {
             ></textarea>
           </div>
 
-          <p className="block text-gray-600 dark:text-gray-300 text-sm font-bold mb-2">
+          <p className="block text-gray-600 text-sm font-bold mb-2">
             Services
           </p>
           <div className="mb-6 grid grid-cols-2 gap-4">
@@ -174,7 +173,7 @@ const Contact = () => {
                 checked={formData.services.includes(service)}
                 onChange={handleInputChange}
                 />
-                <span className="text-gray-600 dark:text-gray-300">
+                <span className="text-gray-600">
                   {service}
                 </span>
               </label>
@@ -194,26 +193,26 @@ const Contact = () => {
 
         <div className="flex flex-col max-w-lg w-full lg:w-auto lg:max-w-auto">
           <div className="py-4">
-            <h2 className="text-2xl font-bold my-2 dark:text-white">
+            <h2 className="text-2xl font-bold my-2">
               Chat With Us
             </h2>
             <p className="text-gray-600 ">
               Chat with our team for instant support.
             </p>
             <div className="py-4">
-              <div className=" text-gray-600 dark:text-white flex items-center gap-2 my-1">
+              <div className=" text-gray-600 flex items-center gap-2 my-1">
                 <TbMessage className="w-4 h-4" />
                 <Link href="https://wa.me/9233333132528" target="_blank" className="hover:underline cursor-pointer">
                   Start a live chat
                 </Link>
               </div>
-              <div className="text-gray-600 dark:text-white flex items-center gap-2 my-1">
+              <div className="text-gray-600 flex items-center gap-2 my-1">
                 <SiMinutemailer className="w-4 h-4" />
                 <Link href="mailto:salman333699@gmail.com" target="_blank" className="hover:underline cursor-pointer">
                   Shoot us on Email
                 </Link>
               </div>
-              <div className="text-gray-600 dark:text-white flex items-center gap-2 my-1">
+              <div className="text-gray-600 flex items-center gap-2 my-1">
                 <BsLinkedin className="w-4 h-4" />
                 <Link href="https://www.linkedin.com/in/muhammad-salman-158213287/" target="_blank" className="hover:underline cursor-pointer">
                   Message us on Linkedin
@@ -223,12 +222,12 @@ const Contact = () => {
           </div>
 
           <div className="py-4">
-            <h2 className="text-2xl font-bold my-2 dark:text-white">Call Us</h2>
+            <h2 className="text-2xl font-bold my-2">Call Us</h2>
             <p className="text-gray-600">
               Call our team Mon-Fri from 8am to 6am.
             </p>
             <div className="py-4">
-              <div className=" text-gray-600 dark:text-white flex items-center gap-2 my-1">
+              <div className="text-gray-600 flex items-center gap-2 my-1">
                 <IoIosCall className="w-4 h-4" />
                 <Link href="tel:+9233333132528" target="_blank" className="hover:underline cursor-pointer">
                   +92 333 3132528

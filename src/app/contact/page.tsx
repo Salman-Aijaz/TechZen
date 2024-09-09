@@ -5,7 +5,7 @@ import ContactClosing from '../components/ContactClosing'
 
 const page = () => {
   return (
-    <div className='dark:bg-gray-950 bg-white'>
+    <div className='bg-gray-50'>
       <ContactHero/>
       <Contact/>
       <ContactClosing/>

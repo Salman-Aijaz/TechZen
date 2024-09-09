@@ -37,22 +37,22 @@ const OurServices = () => {
     }, []);
   return (
     <div className='pb-16'>
-        <h2 className="text-5xl font-bold py-6 text-center dark:text-white">Our Services</h2>
+        <h2 className="text-5xl font-bold py-6 text-center">Our Services</h2>
         <p className='text-gray-600 my-2 text-center'>Experience exceptional quality and creativity through our diverse range of tailored services.</p>
-        <div className="flex justify-center items-center px-6 md:px-28 lg:px-40 py-4 cursor-default select-none ">
+        <div className="flex justify-center items-center px-6 md:px-28 lg:px-40 py-4 cursor-default select-none">
             <div className='grid md:grid-cols-2 gap-5 justify-items-center'>
                 {services.map(service => (
                     <div
                         key={service.id}
                         data-aos={service.aos}
-                        className="relative w-full max-w-xs h-[250px] md:h-[275px] bg-white dark:bg-card dark:hover:bg-white/20 border border-black/5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                        className="relative w-full max-w-xs h-[250px] md:h-[275px] bg-gray-50 border border-black/5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out"
                     >
                         <div className='p-4 h-full flex flex-col justify-between'>
                             <div>
-                                <span className='text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100'>{service.title}</span>
-                                <p className='text-gray-600 dark:text-gray-400 text-sm md:text-base pt-2'>{service.description}</p>
+                                <span className='text-lg md:text-xl font-semibold text-gray-900'>{service.title}</span>
+                                <p className='text-gray-600 text-sm md:text-base pt-2'>{service.description}</p>
                             </div>
-                            <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-blue-200 opacity-20 rounded-lg dark:hidden"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-blue-200 opacity-20 rounded-lg "></div>
                         </div>
                     </div>
                 ))}

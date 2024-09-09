@@ -9,7 +9,7 @@ import Contact from "./components/Contact";
 import OurServices from "./components/OurServices";
 export default function Home() {
   return (
-   <div className="dark:bg-gray-950 bg-white">
+   <div className="bg-gray-50">
     <Hero/>
     <AboutUs/>
     <Indroductory/>

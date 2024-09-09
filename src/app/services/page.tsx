@@ -8,7 +8,7 @@ const Services = () => {
    
 
     return (
-        <div className='dark:bg-gray-950 bg-white'>
+        <div className='bg-gray-50'>
             <ServiceHero/>
             <div className='min-h-[200px]'></div>
             <OurServices/>

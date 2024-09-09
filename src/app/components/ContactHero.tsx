@@ -13,14 +13,14 @@ const ContactHero = () => {
 }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center py-16 px-8 md:px-16 bg-white dark:bg-gray-950">
+    <div className="flex flex-col lg:flex-row justify-center items-center py-16 px-8 md:px-16 bg-gray-50">
       {/* Left Text Section */}
       <div data-aos={"fade-up-right"} className="text-center lg:text-left mb-10 md:mb-0 md:max-w-md">
-        <h2 className="font-bold my-4 dark:text-white xl:text-8xl lg:text-7xl text-6xl">
+        <h2 className="font-bold my-4 xl:text-8xl lg:text-7xl text-6xl">
           Reach <span className="text-[#268d8a]">Out</span> to Us{" "}
           <span className="text-purple-700 xl:text-8xl lg:text-7xl text-6xl">Anytime!</span>
         </h2>
-        <p className="text-gray-600 dark:text-gray-300 lg:w-80 my-6">
+        <p className="text-gray-600 lg:w-80 my-6">
           Need help scaling on our platform? Our team is here to provide expert
           support and guidance for your success.
         </p>

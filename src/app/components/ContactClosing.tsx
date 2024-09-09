@@ -11,7 +11,7 @@ const ContactClosing = () => {
 }, []);
 
   return (
-    <div  data-aos={"flip-up"} className="flex flex-col pt-12 items-center dark:text-white">
+    <div  data-aos={"flip-up"} className="flex flex-col pt-12 items-center">
     <h2 className="font-bold mt-4 dark:text-white lg:text-7xl text-6xl text-center">
     Ready to take <span className="text-purple-800">your</span> <span className='block'>digital presence to <span className='block'>the next level?</span></span> 
         </h2>

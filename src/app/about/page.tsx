@@ -7,7 +7,7 @@ import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function About() {
   return (
-    <div className="dark:bg-gray-950 bg-white">
+    <div className="bg-gray-50">
       <AboutHero/>
       <AboutUs/>
       <WhyChooseUs/>
