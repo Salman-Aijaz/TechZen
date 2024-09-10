@@ -1,6 +1,7 @@
 import React from 'react'
 import OurServices from '../components/OurServices'
 import ServiceHero from '../components/ServiceHero'
+import OurSkill from '../components/OurSkill'
 
 const Services = () => {
     return (
@@ -8,6 +9,8 @@ const Services = () => {
             <ServiceHero/>
             <div className='min-h-[200px]'></div>
             <OurServices/>
+            {/* <div className='min-h-[200px]'></div> */}
+            <OurSkill/>
         </div>
     )
 }

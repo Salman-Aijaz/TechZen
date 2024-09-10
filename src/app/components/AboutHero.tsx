@@ -13,7 +13,7 @@ const AboutHero = () => {
 }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center py-16 px-8 md:px-16 bg-gray-50">
+    <div className="flex flex-col lg:flex-row justify-center items-center py-24 px-8 md:px-16 bg-gray-50">
       {/* Left Text Section */}
       <div data-aos={"fade-up-right"} className="text-center lg:text-left mb-10 md:mb-0 md:max-w-2xl">
         <h2 className="font-bold my-4 2xl:text-8xl lg:text-7xl text-6xl">

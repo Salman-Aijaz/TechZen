@@ -61,15 +61,15 @@ const Team = () => {
             <h3 className="text-xl font-semibold text-gray-800 pb-2">{name}</h3>
             <p className="text-gray-600 pb-2">{title}</p>
             <div className='flex gap-4'>
-              <Link href={link[0]} target='_blank' className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
+              <Link href={link[0]} target='_blank' className="text-gray-400 transition duration-100">
               <ProfileIcon/>
               </Link>
 
-              <Link href={link[1]} target='_blank' className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
+              <Link href={link[1]} target='_blank' className="text-gray-400 transition duration-100">
               <LinkedinIcon/>
               </Link>
 
-              <Link href={link[2]} target='_blank' className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
+              <Link href={link[2]} target='_blank' className="text-gray-400 transition duration-100">
               <GithubIcon/>
               </Link>
                </div>
