@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import logo from "../../../public/logo.png";
+import logo from "../assets/logo.png"
 import Image from 'next/image';
 
 const navLinks = [

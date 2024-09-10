@@ -1,11 +1,10 @@
 "use client"
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import Salman from "../../../public/muhammad salman.jpeg";
-import Sufiyan from "../../../public/muhammad sufiyan.jpeg";
-import Zaeem from "../../../public/muhammad zaeem.jpg";
-import Hasan from "../../../public/muhammad hasan.jpeg";
-import AOS from 'aos';
+import Salman from "../assets/muhammad salman.jpeg";
+import Sufiyan from "../assets/muhammad sufiyan.jpeg";
+import Zaeem from "../assets/muhammad zaeem.jpg";
+import Hasan from "../assets/muhammad hasan.jpeg";
 import { GithubIcon, LinkedinIcon, ProfileIcon } from '../assets/Icon/Icon';
 import Link from 'next/link';
 
@@ -55,7 +54,7 @@ const Team = () => {
         {team.map(({ id, name, title, pic, aos,link }) => (
           <div key={id} data-aos={aos}  
           data-aos-duration="1500"
-          data-aos-easing="ease-out" className="bg-gray-50 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 flex flex-col items-center text-center">
+          data-aos-easing="ease-out" className="bg-gray-50 hover:bg-gray-100 p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 flex flex-col items-center text-center">
             <div className="relative w-32 h-32 mb-4">
               <Image src={pic} alt={name} layout="fill" className="rounded-full object-cover" />
             </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logo from "../../../public/logo.png"
+import logo from "../assets/logo.png"
 import Link from 'next/link'
 import {GithubIcon, LinkedinIcon, ProfileIcon, TwitterIcon} from '../assets/Icon/Icon'
 
@@ -23,9 +23,17 @@ const Footer = () => {
             <p className="mb-6 text-gray-600 sm:pr-8"> Techzen excels in MERN stack, JAMstack, and Python development,
               delivering innovative and custom digital solutions for startups and enterprises alike.</p>
             <div className="flex gap-4">
+              <Link  href="" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
               <TwitterIcon/>
+              </Link>
+
+              <Link  href="https://www.linkedin.com/in/muhammad-salman-158213287/" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
               <LinkedinIcon/>
+              </Link>
+
+              <Link  href="https://github.com/Salman-Aijaz/" target="_blank" className="text-gray-400 transition duration-100 hover:text-gray-600 active:text-gray-600">
               <GithubIcon/>
+              </Link>
             </div>
           </div>
 
@@ -51,8 +59,8 @@ const Footer = () => {
             </nav>
           </div>
           <div>
-            <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Services</div>
 
+            <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Services</div>
             <nav className="flex flex-col gap-4">
               <div>
                 <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Frontend Development</Link>
@@ -63,10 +71,15 @@ const Footer = () => {
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">MERN Stack Development </Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Mobile Development</Link>
+              </div>
+
+              <div>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Graphic Desgining</Link>
               </div>
             </nav>
           </div>
+
           <div>
             <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Support</div>
 

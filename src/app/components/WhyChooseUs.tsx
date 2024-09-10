@@ -1,5 +1,5 @@
 import React from 'react';
-import WhiteCircle from '../../../public/white-circle.png';
+import WhiteCircle from '../assets/white-circle.png';
 import Image from 'next/image';
 
 const WhyChooseUs = () => {

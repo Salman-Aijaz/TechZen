@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
+import React, { useEffect, useRef } from 'react'
 
 export const TwitterIcon = () => {
   return (
@@ -110,4 +110,6 @@ export const ProfileIcon = () => {
     </>
   );
 };
+
+
 

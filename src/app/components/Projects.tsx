@@ -1,9 +1,9 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
-import Quiz from "../../../public/Quiz.jpg"
-import Ecommerce from "../../../public/e commerce.png"
-import Gallery from "../../../public/gallery.png"
+import Quiz from "../assets/Quiz.jpg"
+import Ecommerce from "../assets/e commerce.png"
+import Gallery from "../assets/gallery.png"
 import Link from "next/link";
 
 
