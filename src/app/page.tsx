@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Indroductory from "./components/Indroductory";
-// import Services from "./services/page";
 import AboutUs from "./components/AboutUs";
 import Team from "./components/Team";
-import Contact from "./components/Contact";
 import OurServices from "./components/OurServices";
+import ReachOut from "./components/ReachOut";
 export default function Home() {
   return (
    <div className="bg-gray-50">
@@ -16,7 +14,7 @@ export default function Home() {
     <Projects/>
     <Team/>
     <OurServices/>
-    <Contact/>
+    <ReachOut/>
     </div>
   );
 }

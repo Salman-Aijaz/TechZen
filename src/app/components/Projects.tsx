@@ -4,6 +4,8 @@ import Image from "next/image";
 import Quiz from "../../../public/Quiz.jpg"
 import Ecommerce from "../../../public/e commerce.png"
 import Gallery from "../../../public/gallery.png"
+import Link from "next/link";
+
 
 const projects = [
   {
@@ -20,6 +22,7 @@ const projects = [
       "JWT",
     ],
     pic: Quiz,
+    link:"https://quizzical-keen.vercel.app/"
   },
   {
     name: "Sk-Store",
@@ -33,6 +36,7 @@ const projects = [
       "Express JS",
     ],
     pic: Ecommerce,
+    link:"https://sk-store.vercel.app/"
   },
   {
     name: "Pixel Place",
@@ -40,6 +44,7 @@ const projects = [
       "A beautifully crafted gallery app built with Next.js,Tailwind CSS, showcasing elegant UI designs with Shadcn UI for a seamless visual experience.",
     tags: ["Typescript", "Next.js", "Tailwind","Shadcn UI"],
     pic: Gallery,
+    link:"https://pixelsplace.vercel.app/"
   },
 ];
 
@@ -80,6 +85,7 @@ export default function Projects() {
             }}
             className="group mb-3 sm:mb-8 last:mb-0"
           >
+            <Link href={project.link} target="_blank" >
             <section className="bg-gray-50 w-full max-w-[42rem] mx-auto border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8">
               <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
                 <h3 className="text-2xl font-semibold">{project.name}</h3>
@@ -113,6 +119,7 @@ export default function Projects() {
                 group-even:right-[initial] group-even:-left-40"
               />
             </section>
+            </Link>
           </div>
         ))}
       </div>

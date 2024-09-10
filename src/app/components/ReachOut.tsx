@@ -4,7 +4,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import 'aos/dist/aos.css';
 
-const ContactClosing = () => {
+const ReachOut = () => {
     
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -27,4 +27,4 @@ const ContactClosing = () => {
   )
 }
 
-export default ContactClosing
+export default ReachOut
