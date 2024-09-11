@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
 // }, []);
 
   return (
-    <div className="py-16 relative">
+    <div className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="text-left mb-12 lg:ml-5 ml-3">
           <h2 className="text-4xl font-bold text-gray-800 mb-8">Why Choose Us?</h2>
