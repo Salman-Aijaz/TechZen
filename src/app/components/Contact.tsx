@@ -90,7 +90,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-6 lg:px-0 pb-12">
+    <div className="px-4 sm:px-0 pb-12">
       <h2 className="text-5xl font-bold my-6 text-center">
         Contact Our Team
       </h2>

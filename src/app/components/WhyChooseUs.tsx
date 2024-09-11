@@ -4,7 +4,7 @@ import WhiteCircle from '../assets/white-circle.png';
 import Image from 'next/image';
 import SolutionIcon from "../assets/solution.png"
 import TechIcon from "../assets/technology.png"
-import ClientIcon from "../assets/customer-experience-icon.jpg"
+import ClientIcon from "../assets/customer-experience-icon.png"
 import 'aos/dist/aos.css';
 import AOS from "aos"
 
@@ -57,13 +57,13 @@ const WhyChooseUs = () => {
         <div className="flex flex-wrap justify-between">
         {features.map((feature, index) => (
           <>
-            <div data-aos="fade-down-right"  key={index} className="relative flex flex-col bg-gray-50 p-6 rounded-lg shadow-xl max-w-xs mx-4 mb-8">
+            <div data-aos="fade-down-right"  key={index} className="relative flex flex-col bg-gray-50 p-4 rounded-lg shadow-xl max-w-xs mx-4 my-8">
               <Image src={feature.icon} alt="Icon" className="w-16 h-16 mb-4"/>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
               <div className="absolute inset-0 bg-gradient-to-br from-purple-200 to-blue-200 opacity-20 rounded-lg"></div>
             </div>
-            <div className="absolute inset-0 xl:flex justify-end place-items-end hidden">
+            {/* <div className="absolute inset-0 xl:flex justify-end place-items-end hidden">
             <Image 
               src={WhiteCircle} 
               alt="Background Circle" 
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
               width={300} 
               height={200} 
             />
-          </div>
+          </div> */}
           </>
           ))}
         </div>

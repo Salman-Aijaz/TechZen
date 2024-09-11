@@ -42,19 +42,19 @@ const Footer = () => {
 
             <nav className="flex flex-col gap-4">
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Home</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Home</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">About</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">About</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Services</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Services</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Team</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Team</Link>
               </div>
             </nav>
           </div>
@@ -63,19 +63,19 @@ const Footer = () => {
             <div className="mb-4 font-bold uppercase tracking-widest text-gray-800">Services</div>
             <nav className="flex flex-col gap-4">
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Frontend Development</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Frontend Development</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Backend Development</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Backend Development</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Mobile Development</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Mobile Development</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Graphic Desgining</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Graphic Desgining</Link>
               </div>
             </nav>
           </div>
@@ -85,11 +85,11 @@ const Footer = () => {
 
             <nav className="flex flex-col gap-4">
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Contact</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Contact</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Chat</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Chat</Link>
               </div>
 
             </nav>
@@ -99,11 +99,11 @@ const Footer = () => {
 
             <nav className="flex flex-col gap-4">
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Privacy Policy</Link>
               </div>
 
               <div>
-                <Link href="#" className="text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Terms & Conditions</Link>
+                <Link href="#" className="text-gray-600 transition duration-100 hover:text-[#268d8a] active:text-indigo-600">Terms & Conditions</Link>
               </div>
 
             </nav>

@@ -43,7 +43,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div
-          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-white transition-transform duration-300 ease-in-out transform ${
+          className={`fixed top-0 left-0 z-50 w-3/4 md:w-1/2 h-full bg-gray-50 transition-transform duration-300 ease-in-out transform ${
             isOpen ? 'translate-x-0' : '-translate-x-full'
           } md:hidden`}
           id="navbar-default"
@@ -64,7 +64,7 @@ const Navbar = () => {
             <ul className="flex flex-col p-4 space-y-6">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-lg text-gray-900 dark:text-white">{link.label}</Link>
+                  <Link href={link.href} className="text-lg hover:text-[#268d8a]">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -76,7 +76,7 @@ const Navbar = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className={`block py-2 px-3 rounded ${link.href === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 md:p-0' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0'}`}
+                  className={`block py-2 px-3 rounded ${link.href === '/' ? 'text-white bg-blue-700 md:bg-transparent md:text-[#268d8a] md:p-0' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#268d8a] md:p-0'}`}
                   aria-current={link.href === '/' ? 'page' : undefined}
                 >
                   {link.label}

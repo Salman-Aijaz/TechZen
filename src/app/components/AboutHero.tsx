@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import aboutbg from "../assets/about-bg.jpg"
+import aboutbg from "../assets/about-bg.png"
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 
@@ -13,9 +13,9 @@ const AboutHero = () => {
 }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center py-24 px-8 md:px-16 bg-gray-50">
+    <div className="flex flex-col lg:flex-row justify-center items-center sm:py-20 py-24 px-8 md:px-16 bg-gray-50">
       {/* Left Text Section */}
-      <div data-aos={"fade-up-right"} className="text-center lg:text-left mb-10 md:mb-0 md:max-w-2xl">
+      <div className="text-center lg:text-left mb-10 md:mb-0 md:max-w-2xl">
         <h2 className="font-bold my-4 2xl:text-8xl lg:text-7xl text-6xl">
           <span className="block">Your <span className='text-[#268d8a]'>Vision</span></span>
           <span className="block">Our Expertise</span>
@@ -32,13 +32,13 @@ const AboutHero = () => {
       </div>
  
       {/* Right Image Section */}
-      <div className="w-full py-8 lg:py-0 md:w-3/4 lg:w-2/5 flex justify-center md:justify-end">
+      <div className="w-full py-8 lg:py-0 md:w-3/4 lg:w-2/5 flex justify-center md:justify-end animate-bounce-slow">
         <Image
           src={aboutbg}
           alt="Contact Background"
           width={400}
           height={1000}
-          className="w-3/4 sm:w-2/3 md:w-full lg:w-4/5 object-cover rounded-lg shadow-lg"
+          className="w-3/4 sm:w-2/3 md:w-full lg:w-4/5 object-cover"
         />
       </div>
     </div>

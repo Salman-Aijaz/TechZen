@@ -54,7 +54,7 @@ const OurServices:React.FC = () => {
     }, []);
 
   return (
-    <div className='pb-16'>
+    <div className='pb-16 px-4 sm:px-0'>
         <h2 className="text-5xl font-bold py-6 text-center">Our Services</h2>
         <p className='text-gray-600 my-2 text-center'>Experience exceptional quality and creativity through our diverse range of tailored services.</p>
         <div className="flex justify-center items-center px-6 md:px-28 lg:px-40 py-4 cursor-default select-none">
