@@ -7,7 +7,7 @@ import OurServices from "./components/OurServices";
 import ReachOut from "./components/ReachOut";
 export default function Home() {
   return (
-   <div className="bg-gray-50">
+   <div className="bg-gray-50 overflow-hidden">
     <Hero/>
     <AboutUs/>
     <Indroductory/>

@@ -95,7 +95,7 @@ const Contact = () => {
         Contact Our Team
       </h2>
       <p className="text-gray-600 text-center">
-        Have questions or need help with scaling on our platform? We're here to
+        Have questions or need help with scaling on our platform? We&apos;re here to
         assist.{" "}
       </p>
       <p className="text-gray-600 text-center">

@@ -4,7 +4,7 @@ import ContactHero from '../components/ContactHero'
 
 const page = () => {
   return (
-    <div className='bg-gray-50'>
+    <div className='bg-gray-50 overflow-hidden'>
       <ContactHero/>
       <Contact/>
     </div>

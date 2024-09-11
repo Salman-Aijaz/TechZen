@@ -5,7 +5,7 @@ import OurSkill from '../components/OurSkill'
 
 const Services = () => {
     return (
-        <div className='bg-gray-50'>
+        <div className='bg-gray-50 overflow-hidden'>
             <ServiceHero/>
             <div className='min-h-[200px]'></div>
             <OurServices/>
